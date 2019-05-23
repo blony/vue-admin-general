@@ -11,6 +11,7 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 
+import "@/icons"; // icon
 Vue.use(ElementUI);
 Vue.config.productionTip = false;
 
