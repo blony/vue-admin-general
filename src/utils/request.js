@@ -4,6 +4,7 @@ import store from "@/store";
 import { getToken } from "@/utils/auth";
 
 // create an axios instance
+// console.log(process.env.VUE_APP_BASE_API);
 const service = axios.create({
   baseURL: process.env.VUE_APP_BASE_API, // url = base url + request url
   withCredentials: true, // send cookies when cross-domain requests
@@ -45,8 +46,8 @@ service.interceptors.response.use(
   response => {
     const res = response.data;
 
-    // if the custom code is not 20000, it is judged as an error.
-    if (res.code !== 20000) {
+    // if the custom code is not 200, it is judged as an error.
+    if (res.code !== 200) {
       Message({
         message: res.message || "error",
         type: "error",

@@ -51,6 +51,7 @@ const actions = {
     });
   },
   getUserInfo({ commit, state }) {
+    console.log(123);
     return new Promise((resolve, reject) => {
       getUserInfo(state.token)
         .then(response => {
