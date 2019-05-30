@@ -19,7 +19,7 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    proxy: "http://localhost:3000"
+    proxy: "http://192.168.16.184:3000"
   },
   chainWebpack(config) {
     // set svg-sprite-loader
